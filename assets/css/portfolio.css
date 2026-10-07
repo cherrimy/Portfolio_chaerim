@@ -1,0 +1,301 @@
+@charset "utf-8";
+ /* 공통 CSS */
+  /* List 요소 */
+  ul, li, ol {
+    list-style: none;
+  }
+  /* img 요소 */
+  img {
+    vertical-align: top;
+  }
+  @font-face {
+    font-style: normal;
+    font-weight: normal;
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  }
+  body {
+    font-family: 'GmarketSansMedium', sans-serif !important;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    /* font-weight: bold; */
+    font-weight: 500;
+  }
+
+  /* Header */
+  #header h1, #header h2 {
+    font-weight: bold;
+  }
+  #header .logo img {
+    width: 85px;
+  }
+  #header p {
+    font-size: 18px;
+  }
+
+  /* ABOUT ME */
+  #intro p {
+    font-size: 15px;
+    text-align: left;
+    /* padding: 0 31px; */
+  }
+  #intro p i {
+    font-size: 22px !important;
+  }
+  #intro p .style:hover {
+    /* text-decoration: underline; */
+    color: red;
+  }
+
+  /* SKILLS */
+  .features li img {
+    width: 200px;
+    height: 200px;
+  }    
+  .features li img:hover {
+    transform:scale(1.1);
+  }
+
+  /* HISTORY */
+  #cta h2 {
+    margin-bottom: 40px;
+  }
+  #cta h3 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  #cta h4 {
+    font-size: 18px;
+    color: gray;
+  }
+  #cta span {
+    font-size: 16px;
+    color: #9CA0A8;
+  }
+  #cta .contents {
+    font-size: 13px;
+  }
+  #cta p {
+    margin-bottom: 20px;
+  }
+
+
+/* 모바일 PROJECTS */
+@media screen and (min-width: 320px) {
+  /* PROJECTS */
+  #second .projects {
+    /* 추가 */
+    /* color: #333 !important; */
+    width: 100%;
+    margin-bottom: 0;
+  }
+  /* 플롯해제 */
+  #second .projects::after {
+    /* 플렉스 */
+    /* display: flex; */
+      content:'';
+      display:block;
+      clear:both; 
+   }
+    
+  #second .projects .preview {
+    width: 90%;
+    /* 플롯 */
+    float: left;
+    margin-bottom: 20px;
+
+  }
+  #second .projects li:last-child {
+    margin-right: 0;
+  }
+  #second .projects li img {
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #000;
+    height: 180px;
+  }
+  #second .projects li h2 {
+    /* 폰트수정 */
+    font-size: 11px;
+    font-weight: bold;
+  }
+  #second .projects li p {
+    /* 폰트수정 */
+    font-size: 9px;
+  }
+  .site .button{
+    width: 100%;
+    text-align: center;
+    background-color: #000;
+    font-size: 14px;
+  }
+  #majon {
+    /* 플렉스 */
+    display: flex;
+  }
+  #majon .button {
+    width: 100% !important;
+    /* 수정 */
+    margin-right: 10px;
+    font-size: 10px;
+  }
+
+}
+
+/* 태블릿 projects */
+@media screen and (min-width:768px) {
+
+  /* PROJECTS */
+  #second .projects .preview {
+    width: 93%;
+    /* margin-right: 85px;  */
+    /* margin-right: 5.3rem; */
+  }
+  #second .projects li:last-child {
+    margin-right: 0;
+  }
+  #second .projects li img {
+    width: 100%;
+    /* height: 330px; */
+    height: 20.6rem;
+    /* padding-bottom: 10px; */
+    margin-bottom: 10px;
+    border: 1px solid #000;
+  }
+  #second .projects li h2 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  #second .projects li p {
+    font-size: 14px;
+    /* text-align: left; */
+  }
+  .site .button{
+    width: 100%;
+    text-align: center;
+    background-color: #000;
+    font-size: 22px;
+  }
+  #majon {
+    /* 플렉스 */
+    display: flex;
+  }
+  #majon .button {
+    width: 100% !important;
+    margin-right: 20px;
+    font-size: 16px;
+  }
+
+  /* ABOUT ME */
+  #intro p {
+    font-size: 18px;
+    text-align: left;
+    /* padding: 0 80px; */
+  }
+  #intro p i {
+    font-size: 22px !important;
+  }
+  #intro p .style:hover {
+    /* text-decoration: underline; */
+    color: red;
+  }
+
+
+}
+
+/* PC */
+@media screen and (min-width:1024px) {
+  #second .projects {
+    width: 100%;
+  }
+  /* 플롯해제 */
+  #second .projects::after {
+    /* 플렉스 */
+    /* display: flex; */
+      content:'';
+      display:block;
+      clear:both; 
+   }
+
+  #second .projects .preview {
+    width: 45%; 
+    margin-right: 85px;  
+    margin-right: 5.3rem; 
+    /* 플롯 */
+  }
+  #second .projects li:last-child {
+    margin-right: 0;
+  }
+  #second .projects li img {
+    width: 100%;
+    /* height: 330px; */
+    height: 20.6rem;
+    /* padding-bottom: 10px; */
+    margin-bottom: 10px;
+    border: 1px solid #000;
+  }
+  #second .projects li h2 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  #second .projects li p {
+    font-size: 14px;
+    /* text-align: left; */
+  }
+  .site .button{
+    width: 100%;
+    text-align: center;
+    background-color: #000;
+    font-size: 21px;
+  }
+  #majon {
+    /* 플렉스 */
+    display: flex;
+  }
+  #majon .button {
+    width: 100% !important;
+    margin-right: 20px;
+    font-size: 16px;
+  }
+
+  /* ABOUT ME */
+  #intro p {
+    font-size: 22px;
+  }
+
+  /* Header */
+  #header h1, #header h2 {
+    font-weight: bold;
+  }
+  #header .logo img {
+    width: 85px;
+  }
+  #header p {
+    font-size: 24px;
+  }
+
+  /* HISTORY */
+  #cta h2 {
+    margin-bottom: 40px;
+  }
+  #cta h3 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  #cta h4 {
+    font-size: 20px;
+    color: gray;
+  }
+  #cta span {
+    font-size: 20px;
+    color: #9CA0A8;
+  }
+  #cta .contents {
+    font-size: 16px;
+  }
+  #cta p {
+    /* 수정 */
+    margin-bottom: 40px !important;
+  }
+
+}
+

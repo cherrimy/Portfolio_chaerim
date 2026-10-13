@@ -4,14 +4,14 @@
 		<title>김채림 | 웹 풀스택 개발자 포트폴리오</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="description" content="React와 Laravel 기반 B2B SaaS를 개발·운영해 온 3년차 웹 풀스택 개발자 김채림의 포트폴리오입니다." />
+		<meta name="description" content="React와 Laravel 기반 B2B SaaS 및 AI 기능을 개발·운영해 온 3년차 웹 풀스택 개발자 김채림의 포트폴리오입니다." />
 		<meta name="author" content="김채림" />
 		<meta property="og:title" content="김채림 | 웹 풀스택 개발자 포트폴리오" />
 		<meta property="og:description" content="서비스 설계부터 개발, QA, 배포, 운영까지 경험한 웹 풀스택 개발자 김채림입니다." />
 		<meta property="og:type" content="website" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/portfolio.css?v=4">
+    <link rel="stylesheet" href="assets/css/portfolio.css?v=15">
     <link rel="icon" type="image/png" href="images/my_logo2.png" />
 	</head>
 	<body class="is-preload">
@@ -25,7 +25,7 @@
             <h1>- 김채림 -</h1>
 						<h2>3년차 웹 풀스택 개발자</h2>
 						<p>
-							React·Laravel 기반 B2B SaaS를 개발·운영하고 있습니다.<br>
+							React·Laravel 기반 B2B SaaS와 AI 기능을 개발·운영하고 있습니다.<br>
 							고객 요구사항 분석부터 프론트엔드·백엔드 개발, QA, 배포와 운영까지 경험했습니다.<br>
 							기능 구현을 넘어 서비스에 필요한 결과를 만드는 개발자를 지향합니다.
               <!-- 방문해주셔서 감사합니다! -->
@@ -84,7 +84,8 @@
 									<p><strong>Frontend</strong><span>React, Vue.js, JavaScript, HTML, CSS/SCSS, jQuery</span></p>
 									<p><strong>Backend</strong><span>PHP, Laravel, Node.js, Express.js, Java/JSP</span></p>
 									<p><strong>Database</strong><span>MariaDB, MySQL</span></p>
-									<p><strong>Work</strong><span>Git, REST API, QA, 배포, 서비스 운영, 고객 요구사항 분석</span></p>
+									<p><strong>AI &amp; API</strong><span>OpenAI API, Claude API, REST API, OCR 연동</span></p>
+									<p><strong>Work</strong><span>Git, SecureCRT, QA, 배포, 서비스 운영, CSAP 보안 대응, 고객 요구사항 분석</span></p>
 								</div>
 								<ul class="features">
 									<li>
@@ -301,19 +302,133 @@
                   </li>
                 </ul>
                 -->
-                <ul class="projects">
+                <ul class="projects featured-projects">
                   <li class="preview">
                     <div class="project-content">
                       <img src="./images/zikida.png" alt="지키다 B2B 서비스 화면">
                       <h2>[실무 / 지키다 B2B 웹 서비스]</h2>
-                      <p>(주)지키다 재직 중 개발·유지보수하는 컴플라이언스 B2B 서비스입니다. <br>
-                         - 기간 : 2024.07 ~ 현재 <br>
-                         - 담당역할 : 웹 풀스택 개발, 유지보수 및 운영<br>
-                         - 반응형 : PC에서만 동작하던 화면을 디자인 리뉴얼 시안에 맞춰 데스크톱·태블릿·모바일에서 사용할 수 있게 다시 퍼블리싱했습니다.<br>
-                         - AI 증적 검토 : 점검 답변과 증적 자료의 일치 여부를 판별하고, 화면을 이동해도 검토가 이어지도록 백그라운드 task를 구현했습니다.<br>
-                         - AI 위수탁계약서 : 첨부 문서를 단계별로 위반·권고 판단하도록 프롬프트와 API를 개발했습니다.<br>
-                         - 사용기술 : PHP, Laravel, React, Vue, JavaScript, HTML, SCSS
-                      </p>
+                      <p class="project-summary">스타트업 IT 기업인 (주)지키다에서 기업용 컴플라이언스·보안 솔루션의 기획, 개발, QA, 운영과 보안 대응을 담당하고 있습니다.</p>
+                      <dl class="project-meta">
+                        <div><dt>기간</dt><dd>2024.07 ~ 현재</dd></div>
+                        <div><dt>역할</dt><dd>웹 풀스택 개발, 유지보수 및 운영</dd></div>
+                        <div><dt>기술</dt><dd>PHP, Laravel(Job/Queue), React, Vue, JavaScript, SCSS, MySQL, OpenAI API, Claude API</dd></div>
+                      </dl>
+                      <div class="case-study">
+                        <article>
+                          <h3>AI 문서 검토(위수탁계약서) UI 기획 및 프론트/백엔드 개발, TASK 처리 구현</h3>
+                          <p><strong>문제</strong>위수탁계약서의 위반·권고 여부를 담당자가 조항마다 직접 확인해야 해서 시간이 오래 걸리고 누락 위험이 있었습니다.</p>
+                          <p><strong>어려움</strong>같은 계약서인데도 AI 답변이 매번 달랐고, 위반과 권고를 가르는 기준이 모호했습니다. 긴 문서에서는 일부 조항이 누락됐습니다.</p>
+                          <p><strong>해결</strong>정답지와 AI 결과를 비교해 틀린 사례를 하나씩 분석하며 프롬프트와 API를 반복 개선했습니다. 불필요한 지시와 중복 호출을 줄이는 방향으로 프롬프트와 API 호출 구조를 정리해 응답 속도도 개선했습니다. 검토 화면을 기획·개발하고, 검토를 TASK(JOB)로 처리해 화면을 이동해도 백그라운드에서 계속 진행되게 했습니다.</p>
+                          <p><strong>결과</strong>정답지 기준 정확도 약 95%를 달성했습니다. 건당 처리 시간은 약 90초에서 약 40초로, 약 50초 줄였습니다.</p>
+                          <div class="shots">
+                            <figure><img src="./images/AI문서검토%20기능%20화면.png" alt="AI 문서 검토 위수탁계약서 업로드 화면" loading="lazy"><figcaption>문서 검토 화면</figcaption></figure>
+                            <figure><img src="./images/AI문서검토%20결과%20화면.png" alt="AI 문서 검토 결과 내역 화면" loading="lazy"><figcaption>검토 결과(위반·권고)</figcaption></figure>
+                          </div>
+                        </article>
+                        <article>
+                          <h3>AI 증적 검토 프론트엔드 UI 기획 및 개발, TASK 처리 프론트/백엔드 기능 구현</h3>
+                          <p><strong>문제</strong>관리자가 증적 검토를 건별로 실행·활성화해야 했습니다. 검토 중 화면을 이동하면 진행 상황을 확인할 수 없었습니다.</p>
+                          <p><strong>어려움</strong>작업이 실패하거나 중간에 멈췄을 때 사용자에게 알려야 했습니다. 같은 검토가 중복 실행되는 것도 막아야 했습니다.</p>
+                          <p><strong>해결</strong>AI 증적 검토 화면을 기획·개발하고, JOB 기반 TASK 처리를 프론트엔드와 백엔드에 구현해 화면을 이동해도 검토가 이어지게 했습니다. 작업 상태(대기·진행·완료·실패)를 화면에 표시하고 실패 시 사유를 알렸으며, 같은 대상에 진행 중인 작업이 있으면 새 실행을 막았습니다. 일괄 실행과 일괄 활성화도 제공했습니다.</p>
+                          <p><strong>결과</strong>관리자 수작업 처리 시간을 약 50% 줄였습니다.</p>
+                          <div class="shots">
+                            <figure><img src="./images/AI%20증적검토%20결과%20화면.png" alt="AI 증적자료 검토 결과 화면" loading="lazy"><figcaption>증적 검토 결과</figcaption></figure>
+                          </div>
+                        </article>
+                        <article>
+                          <h3>온프레미스 전용 중계서버 구축 및 외부 API 호출 기능 구현</h3>
+                          <p><strong>문제</strong>온프레미스 환경에서는 메시지, Sentry, 이메일, AI 같은 외부 API를 WAS에서 직접 호출하기 어려웠습니다.</p>
+                          <p><strong>어려움</strong>온프레미스는 환경 변수를 추가할 때마다 현장 방문이 필요할 수 있어서, 중계서버의 환경 변수를 최소화해야 했습니다. 그렇다고 WAS가 필요한 정보를 payload로 매번 전달하면 민감 정보가 노출될 수 있어 보안상 위험했습니다.</p>
+                          <p><strong>해결</strong>payload 전달 방식의 보안 위험을 근거로 설명해 설계를 조정했습니다. 중계서버가 WAS의 env를 직접 조회해 쓰는 구조로 구현했고, 이 중계서버가 외부 API(메시지, Sentry, 이메일, AI)를 대신 호출합니다.</p>
+                          <p><strong>결과</strong>환경 변수 추가와 현장 방문 부담을 줄이면서, 민감 정보를 payload로 보내지 않고도 외부 API 호출 기능을 제공했습니다.</p>
+                          <details class="process">
+                            <summary>구조도 보기</summary>
+                            <div class="arch" role="img" aria-label="WAS가 중계서버에 요청하면 중계서버가 WAS의 env를 가져와 외부 API(메시지, Sentry, 이메일, AI)를 호출하는 구조">
+                              <div class="arch-node">WAS<small>온프레미스 서비스</small></div>
+                              <div class="arch-arrow">호출 요청<small>(민감 정보 payload 없음)</small></div>
+                              <div class="arch-node arch-main">중계서버<small>WAS env 조회 후 사용</small></div>
+                              <div class="arch-arrow">API 호출</div>
+                              <div class="arch-node">외부 API<small>메시지 · Sentry · 이메일 · AI</small></div>
+                            </div>
+                          </details>
+                        </article>
+                        <article>
+                          <h3>AI 이미지 개인정보 마스킹 기능 구현</h3>
+                          <p><strong>문제</strong>증적 이미지의 개인정보를 AI로 식별해 자동으로 마스킹해야 했습니다.</p>
+                          <p><strong>어려움</strong>AI는 개인정보가 무엇인지는 잘 식별했지만, 마스킹에 필요한 정확한 좌표를 찾는 성능은 약했습니다.</p>
+                          <p><strong>해결</strong>AI와 OCR을 결합한 하이브리드 방식으로 구현했습니다. Tesseract OCR이 개인정보를 1차로 식별하고 정확한 좌표를 잡으며, OCR이 놓친 항목은 AI API가 2차로 식별하고 좌표를 추출하도록 단계를 나눴습니다.</p>
+                          <p><strong>결과</strong>AI 단독 방식 약 60% 대비 인식 정확도를 약 80%까지 개선했습니다.</p>
+                          <details class="process">
+                            <summary>개발 단계 보기</summary>
+                            <ol>
+                              <li>입력 검증: 이미지와 파라미터 확인</li>
+                              <li>임시 파일·메타 준비: 임시 디렉터리 생성, 이미지 크기 추출</li>
+                              <li>OCR 전처리: 리사이즈·그레이스케일·이진화, 흰 격자선 제거</li>
+                              <li>Tesseract OCR 실행: 언어·PSM 조합으로 후보 선택</li>
+                              <li>OCR 결과 후처리: 노이즈 필터링, 같은 줄의 인접 텍스트 결합</li>
+                              <li>AI 개인정보 식별: 이미지와 프롬프트, OCR 텍스트 힌트를 AI에 전달해 JSON으로 수신</li>
+                              <li>AI·OCR 매칭: 유사도 기반으로 좌표 매칭</li>
+                              <li>미매칭 개인정보: AI가 좌표를 직접 추출</li>
+                              <li>결과 통합·필터링: 유형별 유효성 검사, 중복·겹침 제어</li>
+                              <li>마스킹 이미지 생성: 좌표를 픽셀 좌표로 변환해 박스와 유형 라벨 표시</li>
+                              <li>응답 구성: 원본·마스킹 이미지, 좌표 목록, 처리 시간, 하이브리드 통계 반환</li>
+                              <li>정리: 임시 파일 삭제, 예외 시 로깅과 표준 에러 응답</li>
+                            </ol>
+                          </details>
+                        </article>
+                        <article>
+                          <h3>주간 뉴스 업로드 AI 연계 반자동화</h3>
+                          <p><strong>문제</strong>주간 뉴스의 제목, 내용, 링크를 항목마다 복사해 붙여 넣는 반복 업무에 약 1시간이 걸렸습니다.</p>
+                          <p><strong>어려움</strong>ChatGPT가 업로드 양식에 맞는 CSV를 일관되게 만들도록 프롬프트를 설계하기 어려웠습니다. 출력 형식이 매번 달라지거나 특수문자 때문에 CSV가 깨져 여러 번 수정했습니다.</p>
+                          <p><strong>해결</strong>CSV 양식 다운로드와 CSV 업로드 기능을 직접 제안하고 개발했습니다. 양식과 지침 프롬프트는 ChatGPT 프로젝트에 저장해 두었습니다. 뉴스만 붙여 넣으면 양식에 맞는 CSV가 만들어지고, 관리자 페이지에 올리면 제목·내용·링크가 한 번에 등록됩니다.</p>
+                          <p><strong>결과</strong>약 1시간 걸리던 업무를 약 10분으로 줄였습니다.</p>
+                          <div class="shots">
+                            <figure><img src="./images/주간뉴스%20업로드.png" alt="주간 뉴스 CSV 업로드 화면" loading="lazy"><figcaption>주간 뉴스 CSV 업로드</figcaption></figure>
+                          </div>
+                        </article>
+                        <article>
+                          <h3>PC 전용 화면의 모바일·태블릿·PC 반응형 퍼블리싱</h3>
+                          <p><strong>문제</strong>서비스 화면이 PC 전용이라 모바일·태블릿에서는 사용하기 불편했습니다.</p>
+                          <p><strong>어려움</strong>모바일 시안만 있고 태블릿 시안이 없었습니다. 기준 없이 세 가지 화면 크기를 일관되게 맞춰야 했습니다.</p>
+                          <p><strong>해결</strong>모바일 시안을 기준으로 브레이크포인트(모바일·태블릿·PC)를 정했습니다. 태블릿은 모바일과 PC의 중간 레이아웃으로 직접 설계했고, 공통 컴포넌트를 재사용해 반응형 UI 전환을 단독으로 마쳤습니다.</p>
+                          <p><strong>결과</strong>별도 디자인 지원 없이 모바일·태블릿·PC 모든 화면에서 같은 서비스를 이용할 수 있게 됐습니다.</p>
+                          <div class="shots shots-device">
+                            <figure><img src="./images/pc.png" alt="PC 화면" loading="lazy"><figcaption>PC</figcaption></figure>
+                            <figure><img src="./images/태블릿.png" alt="태블릿 화면" loading="lazy"><figcaption>태블릿</figcaption></figure>
+                            <figure><img src="./images/모바일.png" alt="모바일 화면" loading="lazy"><figcaption>모바일</figcaption></figure>
+                          </div>
+                        </article>
+                        <article>
+                          <h3>기업 고객 계정 일괄 등록 기능 자발적 개발</h3>
+                          <p><strong>문제</strong>기업 고객의 계정을 관리자가 하나씩 등록해야 해서 반복 업무가 많았습니다.</p>
+                          <p><strong>어려움</strong>수십 개를 한 번에 등록하다 일부만 실패하는 경우를 처리해야 했습니다. 실패한 데이터를 사용자가 바로 확인하고 고칠 수 있어야 했습니다.</p>
+                          <p><strong>해결</strong>업무 중 발견한 불편을 개선하려고 직접 개발했습니다. 일괄 등록 기능을 만들고 성공·실패 건수를 보여 주며, 실패한 데이터는 목록과 실패 사유를 함께 표시합니다.</p>
+                          <p><strong>결과</strong>하나씩 하던 계정 등록을 수십 개 한 번에 처리할 수 있게 됐고, 고객사에서도 좋은 반응을 얻었습니다.</p>
+                          <div class="shots">
+                            <figure><img src="./images/사용자%20일괄%20추가.png" alt="사용자 일괄 추가 화면" loading="lazy"><figcaption>사용자 일괄 추가</figcaption></figure>
+                          </div>
+                        </article>
+                        <article>
+                          <h3>CSAP 보안 취약점 개선 및 OTP 2단계 인증 로그인 개발</h3>
+                          <p><strong>문제</strong>CSAP 보안 점검에서 취약 코드 12건과 로그인 보안 보완 사항이 지적되었습니다.</p>
+                          <p><strong>어려움</strong>스캐너가 지적한 항목 중 실제 위험인 것과 오탐을 구분해야 했습니다.</p>
+                          <p><strong>해결</strong>지적 항목을 코드 기준으로 하나씩 확인해 실제 위험은 수정하고, 오탐은 근거를 정리했습니다. 로그인 보안 강화를 위해 OTP 2단계 인증 로그인을 개발했습니다.</p>
+                          <p><strong>결과</strong>지적된 취약점을 모두 조치하고 OTP 2단계 인증을 적용해 CSAP 보안 점검에 대응했습니다.</p>
+                          <div class="shots">
+                            <figure><img src="./images/OTP%202차%20인증%20화면.png" alt="OTP 2단계 인증 화면" loading="lazy"><figcaption>OTP 2단계 인증</figcaption></figure>
+                          </div>
+                        </article>
+                        <article>
+                          <h3>일반 점검바 기능 개발 및 조건별 900개 문항 구현</h3>
+                          <p><strong>문제</strong>조건에 따라 달라지는 일반 점검 문항을 서비스에서 일관되게 처리할 방법이 필요했습니다.</p>
+                          <p><strong>어려움</strong>개발 중에 요구사항이 바뀌어 문항 구조와 조건을 다시 맞춰야 했습니다.</p>
+                          <p><strong>해결</strong>일반 점검바 기능을 개발하고, 법률 전문가 관점의 요구사항에 맞춰 900개 문항을 구현했습니다. 조건별 문항을 데이터 기준으로 관리해 요구사항이 바뀌어도 대응하기 쉽게 했습니다.</p>
+                          <p><strong>결과</strong>조건이 다른 900개 점검 문항을 하나의 일반 점검바에서 처리할 수 있게 됐습니다.</p>
+                          <div class="shots">
+                            <figure><img src="./images/일반점검바%20UI.png" alt="일반 점검바 화면" loading="lazy"><figcaption>일반 점검바</figcaption></figure>
+                          </div>
+                        </article>
+                      </div>
                     </div>
                     <div class="site">
 											<a href="https://zikida.com" class="button" target="_blank" rel="noopener noreferrer">서비스 보기</a>
@@ -322,17 +437,39 @@
                   <li class="preview">
                     <div class="project-content">
                       <img src="./images/hyperstockloan.PNG" alt="하이퍼스탁론 웹·모바일 서비스 화면">
-                      <h2>[실무 / 하이퍼스탁론 웹·모바일 구축 및 운영]</h2>
-                      <p>(주)잇핀 재직 중 하이퍼스탁론 웹·모바일 서비스를 구축하고, 운영과 배포를 맡은 프로젝트입니다. <br>
-                         - 프로젝트 기간 : 2024.02.06 ~ 2024.04.05 <br>
-                         - 담당역할 : 프로젝트 리더(PL), 웹 풀스택 개발, 운영 및 배포<br>
-                         - 담당 화면 : 메인(홈), 상담신청, 한도조회, 이벤트, 하이퍼쇼츠 영상 <br>
-                         - 사용기술 : HTML, CSS, JavaScript, Node.js, MySQL, MariaDB, 스파이더젠<br>
-                         - 참여인원 : 4명
-                      </p>
+                      <h2>[실무 / 금융 플랫폼 3개 프로젝트 리딩]</h2>
+                      <p class="project-summary">(주)잇핀에서 세 프로젝트의 PL 겸 풀스택 개발자로 일정·업무 분배부터 설계, 개발, 고객 피드백 반영, 배포까지 수행했습니다.</p>
+                      <dl class="project-meta">
+                        <div><dt>기간</dt><dd>2024.02 ~ 2024.06</dd></div>
+                        <div><dt>역할</dt><dd>프로젝트 리더(PL), 웹 풀스택 개발, 배포(SI 프로젝트)</dd></div>
+                        <div><dt>기술</dt><dd>HTML, CSS, JavaScript, Node.js, MySQL, MariaDB, SpiderGen</dd></div>
+                      </dl>
+                      <div class="case-study">
+                        <article>
+                          <h3>하이퍼스탁론 웹·모바일 · 4명</h3>
+                          <p><strong>문제</strong>하이퍼스탁론 서비스를 웹과 모바일에서 모두 이용할 수 있도록 메인, 상담신청, 한도조회, 이벤트, 하이퍼쇼츠 영상 페이지를 구축해야 했습니다.</p>
+                          <p><strong>어려움</strong>한도조회와 상담신청처럼 사용자 입력이 많은 페이지를 웹과 모바일에서 일관되게 동작시켜야 했습니다. 고객사가 요구사항대로 구현됐는지 직접 확인하는 SI 프로젝트라 최초 피드백을 빠르게 반영해야 했습니다.</p>
+                          <p><strong>해결</strong>PL로서 페이지별 업무를 팀원 4명에게 나누고, 웹·모바일 화면을 함께 구축했습니다. 입력값 검증을 공통으로 적용하고, 화면별로 점검한 뒤 고객사에 전달했습니다. 받은 최초 피드백은 항목별로 정리해 수정했습니다.</p>
+                          <p><strong>결과</strong>일정 내에 모든 페이지를 구축하고, 고객사의 최초 피드백을 반영해 배포를 마쳤습니다.</p>
+                        </article>
+                        <article>
+                          <h3>주식 HTS 관심종목 · 3명</h3>
+                          <p><strong>문제</strong>HTS 사용자가 관심 종목을 등록하고 화면을 원하는 대로 설정할 수 있는 기능이 필요했습니다.</p>
+                          <p><strong>어려움</strong>종목 등록과 화면 설정이 서로 연결되어 있어 설정이 바뀌면 화면에 즉시 반영되어야 했습니다.</p>
+                          <p><strong>해결</strong>종목 등록과 화면 설정 페이지를 설계하고, 설정값을 저장해 다시 접속해도 같은 화면이 유지되도록 개발했습니다.</p>
+                          <p><strong>결과</strong>사용자가 관심 종목과 화면 구성을 직접 설정해 사용할 수 있게 했습니다.</p>
+                        </article>
+                        <article>
+                          <h3>바이너리 어드민 · 6명</h3>
+                          <p><strong>문제</strong>회원사별 정산과 기간별 입출금 내역, 실현손익을 관리자 화면에서 조회·관리해야 했습니다.</p>
+                          <p><strong>어려움</strong>정산·손익 데이터가 많아 조회가 느려질 수 있었습니다. 6명이 함께하는 프로젝트라 일정 관리도 필요했습니다.</p>
+                          <p><strong>해결</strong>정산·손익 데이터베이스를 설계하고 인덱스와 쿼리를 최적화했습니다. PL로서 WBS로 일정과 업무를 나누고, 서버 연결, 로그인·로그아웃, 회원사별 정산, 입출금 내역, 실현손익 페이지를 개발했습니다.</p>
+                          <p><strong>결과</strong>기간별 조회 시간을 약 10초에서 약 2초로 줄였고, 일정에 맞춰 배포를 마쳤습니다.</p>
+                        </article>
+                      </div>
                     </div>
                     <div class="site">
-											<a href="https://hyperstock.co.kr" class="button" target="_blank" rel="noopener noreferrer">서비스 보기</a>
+											<a href="https://hyperstock.co.kr" class="button" target="_blank" rel="noopener noreferrer">하이퍼스탁론 보기</a>
 										</div>
                   </li>
                   <!-- <li class="preview">
@@ -390,23 +527,9 @@
                     <h4>웹 풀스택 개발자</h4>
                     <p><span>24.07 ~ 현재</span></p>
                     <p class="contents">
-                      지키다 SaaS 서비스 전체를 유지보수하고, 서비스에 필요한 기능을 개발하고 있습니다.<br>
-                      신세계, 스타벅스, 삼성서울병원 등 대기업 정보보안팀과 직접 소통해 요구사항을 듣고, 개발과 고객 지원까지 담당했습니다.
-                      <br><br>
-                      주요 업무<br>
-                      - 지키다 SaaS 전반의 유지보수와 기능 개발<br>
-                      - PHP/Laravel, React 기반 프론트엔드·백엔드 개발<br>
-                      - 고객 요구사항 분석, 기능 개선, CS·QA·운영<br>
-                      - 외부 API·AI API 연동, CSAP 보안 대응<br><br>
-                      주요 성과<br>
-                      - PC에서만 쓰이던 화면을 디자인 리뉴얼 시안에 맞춰 데스크톱·태블릿·모바일 반응형으로 퍼블리싱했습니다.<br>
-                      - 점검 답변과 증적 자료의 일치 여부를 판별하는 AI 검토 화면과 백그라운드 task를 구현했습니다.<br>
-                      - 위수탁계약서의 위반·권고를 단계별로 판단하는 AI 검토 프롬프트와 API를 개발했습니다.<br>
-                      - 조건이 다른 점검 문항 990개의 분기 처리를 프론트엔드와 백엔드에 구현했습니다.<br>
-                      - Vue로 되어 있던 화면을 React로 전환하는 프론트엔드 리팩토링에 참여했습니다.<br>
-                      - 일괄 점검 완료·초기화 등 고객사 요청 기능을 기획하고 개발했습니다.<br>
-                      - 일괄 사용자 등록과 주간 뉴스처럼 반복되던 업무를 직접 자동화했습니다.<br>
-                      - SmartDoc 등 AI 관련 화면의 UI를 기획했습니다.
+                      지키다 SaaS 서비스를 유지보수하고, 서비스에 필요한 기능을 개발하고 있습니다.<br>
+                      신세계, 스타벅스, 삼성서울병원 등 대기업 정보보안팀과 소통해 요구사항 분석, 개발, QA, 운영을 담당했습니다.<br>
+                      PHP/Laravel, React, Vue 기반 개발과 OpenAI API·Claude API 연동, CSAP 보안 대응을 맡고 있습니다.
                     </p>
                   </div>
                   <hr>
@@ -417,17 +540,7 @@
                     <!-- <p class="contents" style="text-align: left; margin: 0 auto; width: 400px;"> -->
                     <p class="contents">
                       웹 풀스택 개발자이자 프로젝트 리더로 재직했습니다.<br>
-                      서비스 설계부터 화면·서버 개발, 배포, 유지보수까지 담당했습니다.
-                      <br><br>
-                      - 웹 애플리케이션 설계, 개발, 배포, 유지보수<br>
-                      - 일정 관리, 업무 분배, 코드 리뷰<br>
-                      - 고객 요구사항 정리와 기능 구현<br>
-                      - 서버 설정, 파일 전송, 배포<br><br>
-                      사용 기술<br>
-                      - 프론트엔드: HTML, CSS, JavaScript<br>
-                      - 백엔드: Node.js, Express.js, MariaDB, MySQL<br>
-                      - 협업: Git<br>
-                      - 프레임워크: 스파이더젠
+                      하이퍼스탁론, 주식 HTS 관심종목, 바이너리 어드민 등 금융 플랫폼 3개의 설계, 개발, 배포를 담당했습니다.
                       <!-- - 진행 프로젝트 : 하이퍼스탁론 모바일 구축 및 운영 -->
                       <!-- 이전 문구: SecureCRT를 활용하여 서버 설정, 파일 전송, 명령 실행 등의 작업 수행 경험 -->
                     </p>

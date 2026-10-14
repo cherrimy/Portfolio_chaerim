@@ -115,6 +115,64 @@
 
 		}
 
+	// Animate expandable project details.
+		$('details.process, details.more-cases').each(function() {
+
+			var details = this,
+				summary = details.firstElementChild,
+				reduceMotion = window.matchMedia
+					&& window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+			if (!summary || summary.tagName.toLowerCase() != 'summary'
+				|| !details.animate || reduceMotion)
+				return;
+
+			$(summary).on('click', function(event) {
+
+				event.preventDefault();
+
+				if (details.getAttribute('data-animating') == 'true')
+					return;
+
+				var isOpening = !details.open,
+					startHeight = details.offsetHeight,
+					endHeight;
+
+				details.setAttribute('data-animating', 'true');
+
+				if (isOpening) {
+					details.open = true;
+					endHeight = details.scrollHeight;
+				}
+				else
+					endHeight = summary.offsetHeight;
+
+				details.style.overflow = 'hidden';
+
+				var animation = details.animate(
+					[
+						{ height: startHeight + 'px', opacity: 1 },
+						{ height: endHeight + 'px', opacity: isOpening ? 1 : 0.72 }
+					],
+					{
+						duration: 260,
+						easing: 'ease'
+					}
+				);
+
+				animation.onfinish = function() {
+					if (!isOpening)
+						details.open = false;
+
+					details.style.height = '';
+					details.style.overflow = '';
+					details.removeAttribute('data-animating');
+				};
+
+			});
+
+		});
+
 	// Scrolly.
 		$('.scrolly').scrolly({
 			speed: 1000

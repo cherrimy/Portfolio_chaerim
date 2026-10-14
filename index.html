@@ -4,7 +4,7 @@
 		<title>김채림 | 웹 풀스택 개발자 포트폴리오</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="description" content="React와 Laravel 기반 B2B SaaS 및 AI 기능을 개발·운영해 온 3년차 웹 풀스택 개발자 김채림의 포트폴리오입니다." />
+		<meta name="description" content="B2B SaaS 및 AI 기능을 개발·운영하고 반복 업무를 줄이는 기능을 직접 제안해 온 3년차 웹 풀스택 개발자 김채림의 포트폴리오입니다." />
 		<meta name="author" content="김채림" />
 		<meta property="og:title" content="김채림 | 웹 풀스택 개발자 포트폴리오" />
 		<meta property="og:description" content="서비스 설계부터 개발, QA, 배포, 운영까지 경험한 웹 풀스택 개발자 김채림입니다." />
@@ -25,7 +25,7 @@
             <h1>- 김채림 -</h1>
 						<h2>3년차 웹 풀스택 개발자</h2>
 						<p>
-							React·Laravel 기반 B2B SaaS와 AI 기능을 개발·운영하고 있습니다.<br>
+							B2B SaaS와 AI 기능을 개발·운영하며, 반복 업무를 줄이는 기능을 직접 제안해 만들어 왔습니다.<br>
 							고객 요구사항 분석부터 프론트엔드·백엔드 개발, QA, 배포와 운영까지 경험했습니다.<br>
 							AI 문서 검토 시간을 약 90초에서 약 40초로 줄이는 등, 업무 효율을 높이는 기능을 만들어 왔습니다.
               <!-- 방문해주셔서 감사합니다! -->
@@ -316,22 +316,18 @@
                       <div class="case-study">
                         <article>
                           <h3>AI 문서 검토(위수탁계약서) UI 기획 및 프론트/백엔드 개발</h3>
-                          <div class="case-desc">문서 유형별 검토 기능(위수탁계약서·동의서·개인정보처리방침·내부관리계획) 중 위수탁계약서를 담당했습니다. 위수탁계약서를 업로드하면 AI가 조항별로 위반·권고 여부를 검토해 결과를 보여 주는 기능입니다.</div>
-                          <div class="case-role"><strong>참여</strong><span>1인 개발 · UI 기획, 프론트엔드, API 단계별 구현 단독 수행</span></div>
+                          <div class="case-desc">위수탁계약서를 업로드하면 AI가 조항별로 위반·권고 여부를 검토해 보여 주는 기능입니다. (문서 유형별 검토 기능 중 위수탁계약서 담당)</div>
+                          <div class="case-role"><strong>참여</strong><span>UI 기획, 프론트엔드, API 단계별 구현을 직접 담당 (문서 유형별 기능 중 위수탁계약서 파트)</span></div>
                           <div class="step"><strong>문제 원인</strong><ul>
-                            <li>담당자가 계약서 조항마다 위반·권고 여부를 직접 확인해야 해서 시간이 오래 걸리고 누락 위험이 있었습니다.</li>
-                            <li>같은 계약서인데도 AI 답변이 매번 달랐습니다. 위반과 권고를 가르는 기준이 모호했기 때문입니다.</li>
-                            <li>긴 문서에서는 일부 조항이 검토에서 누락됐습니다.</li>
+                            <li>조항마다 직접 확인하느라 시간이 오래 걸리고 누락 위험이 있었으며, 같은 계약서도 AI 답변이 매번 달랐습니다. 긴 문서에서는 일부 조항이 누락됐습니다.</li>
                           </ul></div>
                           <div class="step"><strong>해결 과정</strong><ul>
-                            <li>정답지와 AI 결과를 비교해 틀린 사례를 하나씩 분석하며 프롬프트를 반복 개선했습니다. (예: 같은 조항이 때로는 위반, 때로는 권고로 나오면, 둘을 가르는 기준 문장을 프롬프트에 추가하고 다시 비교)</li>
-                            <li>위반·권고 판단 기준을 프롬프트에 명확히 정리하고, 긴 문서에서도 조항이 빠지지 않도록 검토 방식을 개선했습니다.</li>
-                            <li>불필요한 지시와 중복 호출을 줄여 프롬프트와 API 호출 구조를 정리하고 응답 속도를 개선했습니다.</li>
+                            <li>정답지와 AI 결과를 비교해 틀린 사례를 분석하며 프롬프트를 반복 개선하고, 위반·권고 판단 기준을 명확히 정리했습니다.</li>
+                            <li>긴 문서에서도 조항이 빠지지 않도록 검토 방식을 개선하고, 중복 호출을 줄여 응답 속도를 높였습니다.</li>
                           </ul></div>
                           <div class="step"><strong>결과</strong><ul>
-                            <li>대표님이 제공한 문서 검토 기준을 바탕으로 문서 10종의 정답지를 직접 제작하고, AI 결과와 비교해 일치율을 측정했습니다. 개선 전 약 80%에서 약 95%까지 높였습니다.</li>
-                            <li>같은 계약서에서 답변이 일관되게 나오며 조항 누락도 줄었습니다.</li>
-                            <li>건당 검토 시간을 약 90초에서 약 40초로 줄였습니다.</li>
+                            <li>문서 10종의 정답지를 직접 제작해 AI 결과와 비교하며 일치율을 약 80%에서 약 95%로 높였습니다.</li>
+                            <li>답변이 일관되고 조항 누락이 줄었으며, 건당 검토 시간을 약 90초에서 약 40초로 줄였습니다.</li>
                           </ul></div>
                           <div class="shots">
                             <figure><img src="./images/AI문서검토%20기능%20화면.png" alt="AI 문서 검토 위수탁계약서 업로드 화면" loading="lazy"><figcaption>문서 검토 화면</figcaption></figure>
@@ -339,49 +335,76 @@
                           </div>
                         </article>
                         <article>
-                          <h3>AI 이미지 개인정보 마스킹 기능 구현</h3>
-                          <div class="case-desc">증적으로 올린 이미지 속 개인정보를 AI가 찾아 자동으로 가려 주는 기능입니다.</div>
-                          <div class="case-role"><strong>참여</strong> 1인 개발 · 기획부터 구현까지 단독 수행</div>
+                          <h3>기업·사용자 일괄 추가 및 기업 일괄 연결 기능 직접 제안·개발</h3>
+                          <div class="case-desc">관리자가 여러 기업과 사용자를 한 번에 추가하고, 기업을 서비스에 한 번에 연결할 수 있는 기능입니다.</div>
+                          <div class="case-role"><strong>참여</strong> 기획부터 프론트·백엔드 구현까지 직접 담당</div>
                           <div class="step"><strong>문제 원인</strong><ul>
-                            <li>증적 이미지의 개인정보를 AI로 식별해 자동으로 마스킹해야 했습니다.</li>
-                            <li>AI는 개인정보가 무엇인지는 잘 식별했지만, 마스킹에 필요한 정확한 좌표를 찾는 성능이 약했습니다.</li>
+                            <li>기업·사용자를 하나씩 추가하고 연결하는 반복 작업이 기업 50곳에 약 2시간 걸렸습니다. 요청받은 업무는 아니었지만 업무 중 직접 겪으며 개선이 필요하다고 판단했습니다.</li>
                           </ul></div>
                           <div class="step"><strong>해결 과정</strong><ul>
-                            <li>AI와 OCR을 결합한 하이브리드 방식으로 구현했습니다.</li>
-                            <li>Tesseract OCR로 이미지의 텍스트와 바운딩 박스 좌표를 추출했습니다.</li>
-                            <li>AI가 개인정보 항목을 판별한 뒤 OCR 결과와 매칭해 정확한 좌표를 확보하고, 매칭되지 않은 항목만 AI가 좌표를 보완하도록 구성했습니다.</li>
+                            <li>요청이 없었는데도 먼저 기능을 만들어 시연하며 개선안을 제안했고, 일부 실패해도 바로 고칠 수 있도록 성공·실패 건수와 실패 사유 목록을 설계했습니다.</li>
                           </ul></div>
                           <div class="step"><strong>결과</strong><ul>
-                            <li>AI 단독 방식 대비 개인정보 마스킹 대상 탐지율을 약 60%에서 약 80%로 개선했습니다.</li>
+                            <li>기업 50곳 등록·연결 기준 약 2시간 걸리던 작업을 약 30분으로 줄였고, 실패 건만 고쳐 재처리할 수 있게 했습니다.</li>
+                          </ul></div>
+                          <div class="shots">
+                            <figure><img src="./images/사용자%20일괄%20추가.png" alt="사용자 일괄 추가 화면" loading="lazy"><figcaption>사용자 일괄 추가</figcaption></figure>
+                          </div>
+                        </article>
+                        <article>
+                          <h3>AI 증적 검토 프론트엔드 UI 기획 및 개발, TASK 처리 프론트/백엔드 기능 구현</h3>
+                          <div class="case-desc">수탁사가 제출한 보안 증적자료를 AI가 검토해 일치·불일치·미흡으로 보여 주는 기능입니다.</div>
+                          <div class="case-role"><strong>참여</strong> TASK 구조의 초기 설계는 이사님이 제시 · 이후 UI 기획, 프론트엔드·백엔드 구현은 직접 담당</div>
+                          <div class="step"><strong>문제 원인</strong><ul>
+                            <li>검토를 건별로 실행해야 했고, 화면을 이동하면 진행 상황을 확인할 수 없었으며 중복 실행·실패 알림도 필요했습니다.</li>
+                          </ul></div>
+                          <div class="step"><strong>해결 과정</strong><ul>
+                            <li>JOB 기반 TASK 처리로 화면을 이동해도 검토가 이어지게 하고, 작업 상태·실패 사유 표시, 중복 실행 방지, 일괄 실행·활성화를 구현했습니다. 운영 중 오류는 Sentry와 로그로 원인을 확인해 수정했습니다.</li>
+                          </ul></div>
+                          <div class="step"><strong>결과</strong><ul>
+                            <li>진행 상태와 실패 사유를 바로 확인할 수 있게 됐고, 관리자 수작업 처리 시간을 약 50% 줄였습니다.</li>
+                          </ul></div>
+                          <div class="shots">
+                            <figure><img src="./images/AI%20증적검토%20결과%20화면.png" alt="AI 증적자료 검토 결과 화면" loading="lazy"><figcaption>증적 검토 결과</figcaption></figure>
+                          </div>
+                        </article>
+                        <article>
+                          <h3>AI 이미지 개인정보 마스킹 기능 구현</h3>
+                          <div class="case-desc">증적으로 올린 이미지 속 개인정보를 AI가 찾아 자동으로 가려 주는 기능입니다.</div>
+                          <div class="case-role"><strong>참여</strong> 기획부터 프론트·백엔드 구현까지 직접 담당</div>
+                          <div class="step"><strong>문제 원인</strong><ul>
+                            <li>AI는 개인정보 식별은 잘했지만, 마스킹에 필요한 정확한 좌표를 찾는 성능이 약했습니다.</li>
+                          </ul></div>
+                          <div class="step"><strong>해결 과정</strong><ul>
+                            <li>OCR(Tesseract)은 좌표, AI는 식별에 강한 점을 살려 하이브리드 방식으로 구현했습니다.</li>
+                            <li>OCR이 놓친 항목만 AI가 2차로 식별하고 좌표를 보완하도록 역할을 나눴습니다.</li>
+                          </ul></div>
+                          <div class="step"><strong>결과</strong><ul>
+                            <li>AI 단독 방식 대비 마스킹 대상 탐지율을 약 60%에서 약 80%로 개선했습니다.</li>
                           </ul></div>
                           <details class="process">
                             <summary>핵심 개발 단계 보기</summary>
                             <ol>
-                              <li>OCR 전처리: 리사이즈·그레이스케일·이진화, 흰 격자선 제거 후 Tesseract OCR 실행</li>
-                              <li>AI 개인정보 식별: 이미지와 프롬프트, OCR 텍스트 힌트를 AI에 전달해 JSON으로 수신</li>
-                              <li>AI·OCR 매칭: 유사도 기반으로 좌표를 매칭하고, 미매칭 항목은 AI가 좌표를 직접 추출</li>
-                              <li>결과 통합·필터링: 유형별 유효성 검사, 중복·겹침 제어</li>
-                              <li>마스킹 이미지 생성 및 응답: 좌표를 픽셀 좌표로 변환해 박스와 유형 라벨 표시, 좌표 목록과 처리 통계 반환</li>
+                              <li>OCR 전처리 후 Tesseract로 텍스트와 좌표 추출</li>
+                              <li>AI가 개인정보를 판별하고 OCR 결과와 유사도로 매칭, 미매칭 항목은 AI가 좌표 보완</li>
+                              <li>유형별 검증·중복 제어 후 마스킹 이미지와 좌표 목록 반환</li>
                             </ol>
                           </details>
                         </article>
+                        <details class="more-cases">
+                          <summary>기타 사례 5개 더 보기</summary>
                         <article>
                           <h3>온프레미스 전용 중계서버 구축 및 외부 API 호출 기능 구현</h3>
-                          <div class="case-desc">고객사 내부망(온프레미스)에 설치된 서비스가 메시지·이메일·AI 같은 외부 서비스를 쓸 수 있도록 대신 연결해 주는 서버입니다.</div>
-                          <div class="case-role"><strong>참여</strong> 1인 개발 · 중계서버 방식과 별도 폴더 구조(webRelay 등)의 기초 설계는 상사가 제시 · 세부 설계와 구현은 단독 수행</div>
+                          <div class="case-desc">고객사 내부망(온프레미스) 서비스가 메시지·이메일·AI 같은 외부 서비스를 쓸 수 있도록 대신 연결해 주는 서버입니다.</div>
+                          <div class="case-role"><strong>참여</strong> 개발이사님이 제시한 중계서버 구조(설정값을 WAS 요청으로 전달)를 바탕으로 세부 설계와 구현을 직접 담당</div>
                           <div class="step"><strong>문제 원인</strong><ul>
-                            <li>온프레미스 환경에서는 메시지, Sentry, 이메일, AI 같은 외부 API를 WAS에서 직접 호출하기 어려웠습니다.</li>
-                            <li>운영 환경 특성상 환경 변수 변경에 현장 작업이 필요해, 중계서버에 추가하는 설정값을 최소화해야 했습니다.</li>
-                            <li>이에 필요한 API 설정값을 WAS 요청으로 전달하는 구조가 제안됐지만, 민감 정보가 payload와 로그 등에 노출될 위험이 있었습니다.</li>
+                            <li>온프레미스 WAS에서 외부 API를 직접 호출하기 어려웠고, 현장 작업 부담을 줄이기 위해 개발이사님이 API 설정값을 WAS 요청에 담아 중계서버로 전달하는 구조를 제시했습니다. 이 구조는 민감 정보가 payload·로그에 노출될 수 있다는 우려가 있었습니다.</li>
                           </ul></div>
                           <div class="step"><strong>해결 과정</strong><ul>
-                            <li>중계서버가 외부 API(메시지, Sentry, 이메일, AI)를 대신 호출하도록 구성했습니다.</li>
-                            <li>payload 전달 방식의 보안 위험과 대안을 검토해 공유했습니다.</li>
-                            <li>운영상의 제약으로 기존 전달 구조를 유지하되, 전달 항목 최소화와 요청 검증, 로그 마스킹 등 적용 가능한 보호 조치를 반영해 노출 위험을 낮췄습니다.</li>
+                            <li>중계서버가 외부 API를 대신 호출하도록 구현하고, 노출 위험과 대안을 정리해 이사님께 공유했습니다. 운영 여건상 제시된 구조를 유지하기로 해, 그 안에서 전달 항목 최소화·요청 검증·로그 마스킹으로 위험을 낮췄습니다.</li>
                           </ul></div>
                           <div class="step"><strong>결과</strong><ul>
-                            <li>중계서버의 환경 변수와 현장 변경 부담을 최소화하면서 외부 API 연동 기능을 구현했습니다.</li>
-                            <li>주어진 구조 안에서 민감 정보의 전달·기록 범위를 줄여 보안 위험을 완화했습니다.</li>
+                            <li>현장 변경 부담을 줄이면서 외부 API 연동을 구현했고, 민감 정보의 전달·기록 범위를 줄였습니다.</li>
                           </ul></div>
                           <details class="process">
                             <summary>구조도 보기</summary>
@@ -395,62 +418,15 @@
                           </details>
                         </article>
                         <article>
-                          <h3>기업·사용자 일괄 추가 및 기업 일괄 연결 기능 자발적 개발</h3>
-                          <div class="case-desc">관리자가 여러 기업과 사용자를 한 번에 추가하고, 기업을 서비스에 한 번에 연결할 수 있는 기능입니다.</div>
-                          <div class="case-role"><strong>참여</strong> 1인 개발 · 기획부터 구현까지 단독 수행</div>
+                          <h3>주간 뉴스 업로드 AI 연계 반자동화 직접 제안·개발</h3>
+                          <div class="case-desc">매주 올리는 보안 뉴스를 AI로 정리해 CSV로 한 번에 등록하는 관리자 기능입니다.</div>
+                          <div class="case-role"><strong>참여</strong> 기능을 먼저 만들어 시연하며 제안하고, 구현까지 직접 담당</div>
                           <div class="step"><strong>문제 원인</strong><ul>
-                            <li>관리자가 기업과 사용자를 하나씩 추가하고 기업을 하나씩 연결해야 해서 반복 업무가 많았습니다. 기업 50곳을 등록·연결하는 데 약 2시간이 걸렸습니다.</li>
-                            <li>수십 건을 한 번에 처리하다 일부만 실패하는 경우가 생기므로, 실패한 데이터를 사용자가 바로 확인하고 고칠 수 있어야 했습니다.</li>
+                            <li>매주 뉴스 제목·내용·링크를 항목마다 복사해 붙여 넣는 데 약 1시간이 걸렸습니다. 요청받은 업무는 아니었지만 반복 작업을 줄일 수 있다고 판단했습니다.</li>
+                            <li>ChatGPT가 만든 CSV는 형식이 달라지거나 특수문자로 깨졌습니다.</li>
                           </ul></div>
                           <div class="step"><strong>해결 과정</strong><ul>
-                            <li>업무 중 발견한 불편을 개선하려고 직접 개발했습니다.</li>
-                            <li>기업 일괄 추가, 사용자 일괄 추가, 기업 일괄 연결 기능을 만들고 성공·실패 건수를 보여 줍니다.</li>
-                            <li>실패한 데이터는 목록과 실패 사유를 함께 표시합니다.</li>
-                          </ul></div>
-                          <div class="step"><strong>결과</strong><ul>
-                            <li>기업 50곳 등록·연결 기준 약 2시간 걸리던 작업을 약 30분으로 줄였습니다.</li>
-                            <li>일부 실패해도 실패 데이터와 사유를 바로 확인하고 고쳐서 다시 처리할 수 있고, 고객사에서도 좋은 반응을 얻었습니다.</li>
-                          </ul></div>
-                          <div class="shots">
-                            <figure><img src="./images/사용자%20일괄%20추가.png" alt="사용자 일괄 추가 화면" loading="lazy"><figcaption>사용자 일괄 추가</figcaption></figure>
-                          </div>
-                        </article>
-                        <details class="more-cases">
-                          <summary>기타 사례 5개 더 보기</summary>
-                        <article>
-                          <h3>AI 증적 검토 프론트엔드 UI 기획 및 개발, TASK 처리 프론트/백엔드 기능 구현</h3>
-                          <div class="case-desc">수탁사가 제출한 보안 증적자료를 AI가 검토해 일치·불일치·미흡으로 한눈에 보여 주는 기능입니다.</div>
-                          <div class="case-role"><strong>참여</strong> 이사님이 TASK 구조의 초기 설계를 제시 · 이후 UI 기획, 프론트엔드, 백엔드 구현은 단독 수행</div>
-                          <div class="step"><strong>문제 원인</strong><ul>
-                            <li>관리자가 증적 검토를 건별로 실행·활성화해야 했고, 검토 중 화면을 이동하면 진행 상황을 확인할 수 없었습니다.</li>
-                            <li>작업이 실패하거나 중간에 멈췄을 때 사용자에게 알려야 했고, 같은 검토가 중복 실행되는 것도 막아야 했습니다.</li>
-                          </ul></div>
-                          <div class="step"><strong>해결 과정</strong><ul>
-                            <li>AI 증적 검토 화면을 기획·개발하고, JOB 기반 TASK 처리를 프론트엔드와 백엔드에 구현해 화면을 이동해도 검토가 이어지게 했습니다.</li>
-                            <li>작업 상태(대기·진행·완료·실패)를 화면에 표시하고 실패 시 사유를 알렸습니다.</li>
-                            <li>같은 대상에 진행 중인 작업이 있으면 새 실행을 막고, 일괄 실행과 일괄 활성화를 제공했습니다.</li>
-                            <li><b>장애 대응:</b> 외부 AI API 지연·오류나 작업 중단에 대비해 실패 상태와 사유를 저장하고, 운영 중 오류는 Sentry와 로그로 원인을 확인해 수정·배포했습니다. 실패한 작업은 화면에서 확인한 뒤 다시 실행할 수 있게 했습니다.</li>
-                          </ul></div>
-                          <div class="step"><strong>결과</strong><ul>
-                            <li>화면을 이동해도 검토가 이어지고 진행 상태와 실패 사유를 바로 확인할 수 있게 됐으며, 중복 실행도 막았습니다.</li>
-                            <li>일괄 실행·활성화로 관리자 수작업 처리 시간을 약 50% 줄였습니다.</li>
-                          </ul></div>
-                          <div class="shots">
-                            <figure><img src="./images/AI%20증적검토%20결과%20화면.png" alt="AI 증적자료 검토 결과 화면" loading="lazy"><figcaption>증적 검토 결과</figcaption></figure>
-                          </div>
-                        </article>
-                        <article>
-                          <h3>주간 뉴스 업로드 AI 연계 반자동화</h3>
-                          <div class="case-desc">매주 올리는 보안 뉴스를 AI로 정리해 CSV 파일로 한 번에 등록하는 관리자 기능입니다.</div>
-                          <div class="case-role"><strong>참여</strong> 1인 개발 · 제안부터 구현까지 단독 수행</div>
-                          <div class="step"><strong>문제 원인</strong><ul>
-                            <li>주간 뉴스의 제목, 내용, 링크를 항목마다 복사해 붙여 넣는 반복 업무에 약 1시간이 걸렸습니다.</li>
-                            <li>ChatGPT가 업로드 양식에 맞는 CSV를 일관되게 만들도록 프롬프트를 설계하기 어려웠습니다. 출력 형식이 매번 달라지거나 특수문자 때문에 CSV가 깨졌습니다.</li>
-                          </ul></div>
-                          <div class="step"><strong>해결 과정</strong><ul>
-                            <li>CSV 양식 다운로드와 CSV 업로드 기능을 직접 제안하고 개발했습니다.</li>
-                            <li>ChatGPT 프롬프트에 출력 형식을 고정하고 특수문자를 처리하는 규칙을 넣어 여러 번 보완했고(예: 열 순서를 제목·내용·링크로 고정하고, 쉼표가 들어간 내용은 따옴표로 감싸도록 지시), 양식과 지침은 ChatGPT 프로젝트에 저장해 두었습니다.</li>
-                            <li>뉴스만 붙여 넣으면 양식에 맞는 CSV가 만들어지고, 관리자 페이지에 올리면 제목·내용·링크가 한 번에 등록됩니다.</li>
+                            <li>CSV 양식 다운로드·업로드 기능을 먼저 만들어 시연하며 제안했고, 출력 형식 고정과 특수문자 처리 규칙을 프롬프트에 넣어 안정화했습니다.</li>
                           </ul></div>
                           <div class="step"><strong>결과</strong><ul>
                             <li>약 1시간 걸리던 업무를 약 10분으로 줄였고, CSV가 깨지지 않고 안정적으로 업로드되게 했습니다.</li>
@@ -461,19 +437,16 @@
                         </article>
                         <article>
                           <h3>PC 전용 화면의 모바일·태블릿·PC 반응형 퍼블리싱</h3>
-                          <div class="case-desc">PC에서만 쓸 수 있던 서비스 화면을 모바일과 태블릿에서도 쓸 수 있게 바꾼 작업입니다.</div>
-                          <div class="case-role"><strong>참여</strong> 1인 개발 · 단독 수행</div>
+                          <div class="case-desc">PC에서만 쓸 수 있던 서비스 화면을 모바일·태블릿에서도 쓸 수 있게 바꾼 작업입니다.</div>
+                          <div class="case-role"><strong>참여</strong> 반응형 퍼블리싱 전 과정 직접 담당</div>
                           <div class="step"><strong>문제 원인</strong><ul>
-                            <li>서비스 화면이 PC 전용이라 모바일·태블릿에서는 사용하기 불편했습니다.</li>
-                            <li>모바일 시안만 있고 태블릿 시안이 없어, 기준 없이 세 가지 화면 크기를 일관되게 맞춰야 했습니다.</li>
+                            <li>PC 전용 화면이었고 모바일 시안만 있어, 태블릿까지 기준 없이 일관되게 맞춰야 했습니다.</li>
                           </ul></div>
                           <div class="step"><strong>해결 과정</strong><ul>
-                            <li>모바일 시안을 기준으로 브레이크포인트(모바일·태블릿·PC)를 정했습니다.</li>
-                            <li>태블릿은 모바일과 PC의 중간 레이아웃으로 직접 설계했습니다.</li>
-                            <li>공통 컴포넌트를 재사용해 반응형 UI 전환을 단독으로 마쳤습니다.</li>
+                            <li>모바일 시안 기준으로 브레이크포인트를 정하고, 태블릿은 중간 레이아웃을 직접 설계해 공통 컴포넌트를 재사용했습니다.</li>
                           </ul></div>
                           <div class="step"><strong>결과</strong><ul>
-                            <li>태블릿 시안이 없는 상태에서도 모바일·태블릿·PC 모든 화면에서 같은 서비스를 이용할 수 있게 됐고, 별도 디자인 지원 없이 단독으로 전환을 마쳤습니다.</li>
+                            <li>태블릿 시안 없이 별도 디자인 지원도 받지 않고 모바일·태블릿·PC 전 화면 전환을 단독으로 마쳤습니다.</li>
                           </ul></div>
                           <div class="shots shots-device">
                             <figure><img src="./images/pc.png" alt="PC 화면" loading="lazy"><figcaption>PC</figcaption></figure>
@@ -483,19 +456,16 @@
                         </article>
                         <article>
                           <h3>CSAP 보안 취약점 개선 및 OTP 2단계 인증 로그인 개발</h3>
-                          <div class="case-desc">클라우드 보안 인증(CSAP) 점검에서 지적된 취약 코드를 고치고, 로그인에 OTP 2단계 인증을 추가한 작업입니다.</div>
-                          <div class="case-role"><strong>참여</strong> 1인 개발 · 단독 수행</div>
+                          <div class="case-desc">CSAP 점검에서 지적된 취약 코드를 고치고, 로그인에 OTP 2단계 인증을 추가한 작업입니다.</div>
+                          <div class="case-role"><strong>참여</strong> 취약점 분석·수정과 OTP 로그인 개발 직접 담당</div>
                           <div class="step"><strong>문제 원인</strong><ul>
-                            <li>CSAP 보안 점검에서 취약 코드 12건이 지적됐고, 로그인 보안 보완도 필요했습니다.</li>
-                            <li>스캐너가 지적한 항목 중 실제 위험인 것과 오탐을 구분해야 했습니다.</li>
+                            <li>CSAP 점검에서 취약 코드 12건이 지적됐고, 실제 위험과 오탐을 구분해야 했습니다.</li>
                           </ul></div>
                           <div class="step"><strong>해결 과정</strong><ul>
-                            <li>지적 항목을 코드 기준으로 하나씩 확인해 실제 위험은 수정하고, 오탐은 근거를 정리했습니다.</li>
-                            <li>로그인 보안 보완으로 OTP 2단계 인증 로그인도 개발했습니다.</li>
+                            <li>지적 항목을 코드 기준으로 확인해 실제 위험은 수정하고 오탐은 근거를 정리했으며, OTP 2단계 인증 로그인을 개발했습니다.</li>
                           </ul></div>
                           <div class="step"><strong>결과</strong><ul>
-                            <li>12건 중 실제 위험 10건은 수정하고 오탐 2건은 근거를 정리해 소명했습니다.</li>
-                            <li>OTP 2단계 인증을 적용해 CSAP 보안 점검에 대응했습니다.</li>
+                            <li>12건 중 실제 위험 10건은 수정, 오탐 2건은 근거를 정리해 소명하고 OTP 인증을 적용했습니다.</li>
                           </ul></div>
                           <div class="shots">
                             <figure><img src="./images/OTP%202차%20인증%20화면.png" alt="OTP 2단계 인증 화면" loading="lazy"><figcaption>OTP 2단계 인증</figcaption></figure>
@@ -503,19 +473,16 @@
                         </article>
                         <article>
                           <h3>자가점검 진단 점검바 프론트엔드 개발 및 조건별 900개 문항 화면 구현</h3>
-                          <div class="case-desc">대표 변호사가 Word로 직접 작성한 900개 보안·법률 점검 문항을, 답변에 따라 이동하며 진단하는 화면으로 개발했습니다.</div>
+                          <div class="case-desc">대표 변호사가 Word로 작성한 900개 보안·법률 점검 문항을, 답변에 따라 이동하며 진단하는 화면으로 개발했습니다.</div>
                           <div class="case-role"><strong>참여</strong> 2인 개발 · 사수는 백엔드 초기 구조, 본인은 프론트엔드 중심 개발과 백엔드 일부 구현</div>
                           <div class="step"><strong>문제 원인</strong><ul>
-                            <li>답변마다 이동할 문항이나 특수 처리가 다른 900개 문항을 사용자가 한 화면에서 쉽게 따라가며 답할 수 있어야 했습니다.</li>
-                            <li>개발 중 요구사항이 바뀌어 문항 구조와 조건에 맞춰 화면을 여러 번 수정해야 했습니다.</li>
+                            <li>답변마다 이동 문항과 특수 처리가 다른 900개 문항을 한 화면에서 따라가며 답할 수 있어야 했고, 개발 중 요구사항도 여러 번 바뀌었습니다.</li>
                           </ul></div>
                           <div class="step"><strong>해결 과정</strong><ul>
-                            <li>Word 문항 구조를 바탕으로, 답변에 따라 다음 문항으로 이동하거나 특수 처리를 하는 화면을 개발했습니다.</li>
-                            <li>일부 답변을 고르면 법 권고·위반 문구가 팝업으로 표시되게 했습니다.</li>
-                            <li>요구사항이 바뀔 때마다 팀과 협의해 반영했습니다.</li>
+                            <li>답변에 따라 다음 문항으로 이동하거나 법 권고·위반 문구를 팝업으로 보여 주는 화면을 개발하고, 변경 요구사항은 팀과 협의해 반영했습니다.</li>
                           </ul></div>
                           <div class="step"><strong>결과</strong><ul>
-                            <li>900개 문항을 하나의 점검바에서 처리할 수 있게 됐고, 변경된 요구사항도 일정에 맞춰 반영했습니다.</li>
+                            <li>900개 문항을 하나의 점검바에서 처리할 수 있게 했고, 변경된 요구사항도 일정에 맞춰 반영했습니다.</li>
                           </ul></div>
                           <div class="shots">
                             <figure><img src="./images/일반점검바%20UI.png" alt="자가점검 진단 점검바 화면" loading="lazy"><figcaption>자가점검 진단 점검바</figcaption></figure>
@@ -540,50 +507,45 @@
                       </dl>
                       <div class="case-study">
                         <article>
-                          <h3>하이퍼스탁론 웹·모바일 · 4명</h3>
-                          <div class="case-desc">주식 투자자금 대출 서비스 하이퍼스탁론의 웹·모바일 페이지(메인, 상담신청, 한도조회, 이벤트, 영상)를 구축한 프로젝트입니다.</div>
+                          <h3>바이너리 어드민 · 6명 (PL)</h3>
+                          <div class="case-desc">바이너리 거래 서비스의 관리자 화면으로, 회원사별 정산·입출금 내역·실현손익을 조회·관리합니다.</div>
                           <div class="step"><strong>문제 원인</strong><ul>
-                            <li>하이퍼스탁론 서비스를 웹과 모바일에서 모두 이용할 수 있도록 메인, 상담신청, 한도조회, 이벤트, 하이퍼쇼츠 영상 페이지를 구축해야 했습니다.</li>
-                            <li>한도조회와 상담신청처럼 사용자 입력이 많은 페이지를 웹과 모바일에서 일관되게 동작시켜야 했습니다.</li>
-                            <li>고객사가 요구사항대로 구현됐는지 직접 확인하는 SI 프로젝트라 최초 피드백을 빠르게 반영해야 했습니다.</li>
+                            <li>정산·손익 데이터가 많아 기간별 조회가 느렸고, 6명이 함께하는 프로젝트라 일정 관리도 필요했습니다.</li>
                           </ul></div>
                           <div class="step"><strong>해결 과정</strong><ul>
-                            <li>PL로서 페이지별 업무를 팀원 4명에게 나누고, 웹·모바일 화면을 함께 구축했습니다.</li>
-                            <li>입력값 검증을 공통으로 적용하고, 화면별로 점검한 뒤 고객사에 전달했습니다.</li>
-                            <li>받은 최초 피드백은 항목별로 정리해 수정했습니다.</li>
+                            <li>정산·손익 DB를 설계하고, 기간·회원사로 자주 조회하는 컬럼에 인덱스를 추가하는 등 쿼리를 최적화했습니다.</li>
+                            <li>PL로서 WBS로 일정과 업무를 나누고, 로그인·회원사별 정산·입출금·실현손익 페이지를 개발했습니다.</li>
+                          </ul></div>
+                          <div class="step"><strong>결과</strong><ul>
+                            <li>기간별 조회 시간을 약 10초에서 약 2초로 줄였고, 일정에 맞춰 배포를 마쳤습니다.</li>
+                          </ul></div>
+                        </article>
+                        <article>
+                          <h3>하이퍼스탁론 웹·모바일 · 4명 (PL)</h3>
+                          <div class="case-desc">주식 투자자금 대출 서비스의 웹·모바일 페이지(메인, 상담신청, 한도조회, 이벤트, 영상)를 구축한 SI 프로젝트입니다.</div>
+                          <div class="step"><strong>문제 원인</strong><ul>
+                            <li>입력이 많은 한도조회·상담신청을 웹과 모바일에서 일관되게 동작시켜야 했고, 고객사의 최초 피드백을 빠르게 반영해야 했습니다.</li>
+                            <li>동기들로 이뤄진 팀이라 팀원 간 개발 역량 차이가 있었고, 일정 내 완성도를 맞추는 것이 과제였습니다.</li>
+                          </ul></div>
+                          <div class="step"><strong>해결 과정</strong><ul>
+                            <li>PL로서 페이지별 업무를 팀원 4명에게 나누고, 입력값 검증을 공통으로 적용했습니다. 받은 피드백은 항목별로 정리해 수정했습니다.</li>
+                            <li>개발 진행에 어려움이 있는 팀원은 개발 방법을 직접 알려 주며 함께 진행했고, 동기 팀원들에게는 결과물 기준에 맞춰 수정할 부분을 구체적으로 피드백했습니다.</li>
                           </ul></div>
                           <div class="step"><strong>결과</strong><ul>
                             <li>일정 내에 모든 페이지를 구축하고, 고객사의 최초 피드백을 반영해 배포를 마쳤습니다.</li>
                           </ul></div>
                         </article>
                         <article>
-                          <h3>주식 HTS 관심종목 · 3명</h3>
+                          <h3>주식 HTS 관심종목 · 3명 (PL)</h3>
                           <div class="case-desc">주식 거래 프로그램(HTS)에서 관심 종목을 등록하고 화면 구성을 설정하는 기능입니다.</div>
                           <div class="step"><strong>문제 원인</strong><ul>
-                            <li>HTS 사용자가 관심 종목을 등록하고 화면을 원하는 대로 설정할 수 있는 기능이 필요했습니다.</li>
-                            <li>종목 등록과 화면 설정이 서로 연결되어 있어 설정이 바뀌면 화면에 즉시 반영되어야 했습니다.</li>
+                            <li>종목 등록과 화면 설정이 서로 연결되어 있어, 설정이 바뀌면 화면에 즉시 반영되어야 했습니다.</li>
                           </ul></div>
                           <div class="step"><strong>해결 과정</strong><ul>
-                            <li>종목 등록과 화면 설정 페이지를 설계했습니다.</li>
-                            <li>설정값을 로컬스토리지로 저장해 다시 접속해도 같은 화면이 유지되도록 개발했습니다.</li>
+                            <li>종목 등록·화면 설정 페이지를 설계하고, 설정값을 로컬스토리지에 저장해 다시 접속해도 같은 화면이 유지되게 했습니다.</li>
                           </ul></div>
                           <div class="step"><strong>결과</strong><ul>
                             <li>사용자가 관심 종목과 화면 구성을 직접 설정해 사용할 수 있게 했습니다.</li>
-                          </ul></div>
-                        </article>
-                        <article>
-                          <h3>바이너리 어드민 · 6명</h3>
-                          <div class="case-desc">바이너리 거래 서비스의 관리자 화면으로, 회원사별 정산과 기간별 입출금 내역, 실현손익을 조회·관리합니다.</div>
-                          <div class="step"><strong>문제 원인</strong><ul>
-                            <li>회원사별 정산과 기간별 입출금 내역, 실현손익을 관리자 화면에서 조회·관리해야 했습니다.</li>
-                            <li>정산·손익 데이터가 많아 조회가 느려질 수 있었고, 6명이 함께하는 프로젝트라 일정 관리도 필요했습니다.</li>
-                          </ul></div>
-                          <div class="step"><strong>해결 과정</strong><ul>
-                            <li>정산·손익 데이터베이스를 설계하고 인덱스와 쿼리를 최적화했습니다. (예: 기간·회원사로 자주 조회하는 컬럼에 인덱스를 추가해, 전체 데이터를 훑지 않고 필요한 범위만 찾게 함)</li>
-                            <li>PL로서 WBS로 일정과 업무를 나누고, 서버 연결, 로그인·로그아웃, 회원사별 정산, 입출금 내역, 실현손익 페이지를 개발했습니다.</li>
-                          </ul></div>
-                          <div class="step"><strong>결과</strong><ul>
-                            <li>기간별 조회 시간을 약 10초에서 약 2초로 줄였고, 일정에 맞춰 배포를 마쳤습니다.</li>
                           </ul></div>
                         </article>
                       </div>

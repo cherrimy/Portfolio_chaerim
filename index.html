@@ -11,7 +11,7 @@
 		<meta property="og:type" content="website" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/portfolio.css?v=54">
+    <link rel="stylesheet" href="assets/css/portfolio.css?v=57">
     <link rel="icon" type="image/png" href="images/my_logo2.png" />
 	</head>
 	<body class="is-preload">
@@ -101,13 +101,15 @@
 							<section id="first" class="main special">
 								<header class="major">
 									<h2>SKILLS</h2>
+									<p class="skill-note">Cursor, Claude, ChatGPT 등 AI 도구를 활용해 개발 효율을 높이고, 코드와 결과물은 직접 검토·개선합니다.</p>
 								</header>
 								<div class="skill-groups">
 									<p><strong>Frontend</strong><span>React, Vue.js, JavaScript, HTML, CSS/SCSS, jQuery</span></p>
-									<p><strong>Backend</strong><span>PHP, Laravel, Node.js, Express.js, Java/JSP</span></p>
-									<p><strong>Database</strong><span>MariaDB, MySQL</span></p>
-									<p><strong>AI &amp; API</strong><span>OpenAI API, Claude API, REST API, OCR 연동</span></p>
-									<p><strong>Work</strong><span>Git, SecureCRT, QA, 배포, 서비스 운영, CSAP 보안 대응, 고객 요구사항 분석</span></p>
+									<p><strong>Backend</strong><span>PHP, Laravel, Node.js, Express.js</span></p>
+									<p><strong>Database</strong><span>PostgreSQL, MariaDB, MySQL</span></p>
+									<p><strong>AI</strong><span>OpenAI API, Claude API, OCR(Tesseract)</span></p>
+									<p><strong>Design</strong><span>Figma, Photoshop</span></p>
+									<p><strong>실무</strong><span>Git, REST API, QA, 배포, 서비스 운영, CSAP, 요구사항 분석</span></p>
 								</div>
 								<!-- <ul class="features">
 									<li>
@@ -326,7 +328,7 @@
                       <dl class="project-meta">
                         <div><dt>기간</dt><dd>2024.07 ~ 현재</dd></div>
                         <div><dt>역할</dt><dd>웹 풀스택 개발, 유지보수 및 운영</dd></div>
-                        <div><dt>기술</dt><dd>PHP, Laravel(Job/Queue), React, Vue, JavaScript, SCSS, MySQL, OpenAI API, Claude API</dd></div>
+                        <div><dt>기술</dt><dd>PHP, Laravel(Job/Queue), React, Vue, JavaScript, SCSS, PostgreSQL, OpenAI API, Claude API</dd></div>
                       </dl>
                       <div class="case-study">
                         <article>
@@ -389,27 +391,25 @@
                           </ul></div>
                         </article>
                         <article>
-                          <h3>AI 이미지 개인정보 마스킹 기능 구현</h3>
-                          <div class="case-desc">증적으로 올린 이미지 속 개인정보를 AI가 찾아 자동으로 가려 주는 기능입니다.</div>
-                          <div class="case-role"><strong>참여</strong> 기획부터 프론트·백엔드 구현까지 직접 담당</div>
+                          <h3>자가점검 진단 점검바 프론트엔드 개발 및 조건별 900개 문항 화면 구현</h3>
+                          <div class="case-desc">대표 변호사가 Word로 작성한 900개 보안·법률 점검 문항을, 답변에 따라 이동하며 진단하는 화면으로 개발했습니다.</div>
+                          <div class="case-role"><strong>참여</strong> 2인 개발 · 사수는 백엔드 초기 구조, 본인은 프론트엔드 중심 개발과 백엔드 일부 구현</div>
+                          <div class="shots">
+                            <figure class="shot-tablet">
+                              <div class="device"><img src="./images/zikida_v3.png" alt="자가점검 진단 점검바 화면" loading="lazy"></div>
+                              <figcaption>자가점검 진단 점검바</figcaption>
+                            </figure>
+                          </div>
                           <div class="step"><strong>문제 원인</strong><ul>
-                            <li>AI는 개인정보 식별은 잘했지만, 마스킹에 필요한 정확한 좌표를 찾는 성능이 약했습니다.</li>
+                            <li>900개 문항은 답변마다 다음 문항과 위반·권고 처리가 달랐고, 진행률과 현재 문항이 한 화면에 있어야 했습니다.</li>
                           </ul></div>
                           <div class="step"><strong>해결 과정</strong><ul>
-                            <li>OCR(Tesseract)은 좌표, AI는 식별에 강한 점을 살려 하이브리드 방식으로 구현했습니다.</li>
-                            <li>OCR이 놓친 항목만 AI가 2차로 식별하고 좌표를 보완하도록 역할을 나눴습니다.</li>
+                            <li>답변을 저장하면 필요한 문항을 열고, 해당 없는 문항은 점검 범위에서 빼도록 화면을 구성했습니다.</li>
+                            <li>바뀐 범위를 기준으로 진행률과 준수·권고·위반 상태를 다시 그리게 했고, 권고·위반은 팝업으로 안내했습니다.</li>
                           </ul></div>
                           <div class="step result"><strong>결과</strong><ul>
-                            <li>AI 단독 방식 대비 마스킹 대상 탐지율을 약 60%에서 약 80%로 개선했습니다.</li>
+                            <li>조건이 다른 900개 문항을 점검바 하나에서 이어서 답할 수 있게 했습니다.</li>
                           </ul></div>
-                          <details class="process">
-                            <summary>핵심 개발 단계 보기</summary>
-                            <ol>
-                              <li>OCR 전처리 후 Tesseract로 텍스트와 좌표 추출</li>
-                              <li>AI가 개인정보를 판별하고 OCR 결과와 유사도로 매칭, 미매칭 항목은 AI가 좌표 보완</li>
-                              <li>유형별 검증·중복 제어 후 마스킹 이미지와 좌표 목록 반환</li>
-                            </ol>
-                          </details>
                         </article>
                         <details class="more-cases">
                           <summary>기타 사례 5개 더 보기</summary>
@@ -507,24 +507,27 @@
                           </ul></div>
                         </article>
                         <article>
-                          <h3>자가점검 진단 점검바 프론트엔드 개발 및 조건별 900개 문항 화면 구현</h3>
-                          <div class="case-desc">대표 변호사가 Word로 작성한 900개 보안·법률 점검 문항을, 답변에 따라 이동하며 진단하는 화면으로 개발했습니다.</div>
-                          <div class="case-role"><strong>참여</strong> 2인 개발 · 사수는 백엔드 초기 구조, 본인은 프론트엔드 중심 개발과 백엔드 일부 구현</div>
-                          <div class="shots">
-                            <figure class="shot-tablet">
-                              <div class="device"><img src="./images/zikida_v3.png" alt="자가점검 진단 점검바 화면" loading="lazy"></div>
-                              <figcaption>자가점검 진단 점검바</figcaption>
-                            </figure>
-                          </div>
+                          <h3>AI 이미지 개인정보 마스킹 기능 구현</h3>
+                          <div class="case-desc">증적으로 올린 이미지 속 개인정보를 AI가 찾아 자동으로 가려 주는 기능입니다.</div>
+                          <div class="case-role"><strong>참여</strong> 기획부터 프론트·백엔드 구현까지 직접 담당</div>
                           <div class="step"><strong>문제 원인</strong><ul>
-                            <li>답변마다 이동 문항과 특수 처리가 다른 900개 문항을 한 화면에서 따라가며 답할 수 있어야 했고, 개발 중 요구사항도 여러 번 바뀌었습니다.</li>
+                            <li>AI는 개인정보 식별은 잘했지만, 마스킹에 필요한 정확한 좌표를 찾는 성능이 약했습니다.</li>
                           </ul></div>
                           <div class="step"><strong>해결 과정</strong><ul>
-                            <li>답변에 따라 다음 문항으로 이동하거나 법 권고·위반 문구를 팝업으로 보여 주는 화면을 개발하고, 변경 요구사항은 팀과 협의해 반영했습니다.</li>
+                            <li>OCR(Tesseract)은 좌표, AI는 식별에 강한 점을 살려 하이브리드 방식으로 구현했습니다.</li>
+                            <li>OCR이 놓친 항목만 AI가 2차로 식별하고 좌표를 보완하도록 역할을 나눴습니다.</li>
                           </ul></div>
                           <div class="step result"><strong>결과</strong><ul>
-                            <li>900개 문항을 하나의 점검바에서 처리할 수 있게 했고, 변경된 요구사항도 일정에 맞춰 반영했습니다.</li>
+                            <li>AI 단독 방식 대비 마스킹 대상 탐지율을 약 60%에서 약 90%로 개선했습니다.</li>
                           </ul></div>
+                          <details class="process">
+                            <summary>핵심 개발 단계 보기</summary>
+                            <ol>
+                              <li>OCR 전처리 후 Tesseract로 텍스트와 좌표 추출</li>
+                              <li>AI가 개인정보를 판별하고 OCR 결과와 유사도로 매칭, 미매칭 항목은 AI가 좌표 보완</li>
+                              <li>유형별 검증·중복 제어 후 마스킹 이미지와 좌표 목록 반환</li>
+                            </ol>
+                          </details>
                         </article>
                         </details>
                       </div>
@@ -564,11 +567,11 @@
                           <div class="case-desc">주식 투자자금 대출 서비스의 웹·모바일 페이지(메인, 상담신청, 한도조회, 이벤트, 영상)를 구축한 SI 프로젝트입니다.</div>
                           <div class="step"><strong>문제 원인</strong><ul>
                             <li>입력이 많은 한도조회·상담신청을 웹과 모바일에서 일관되게 동작시켜야 했고, 고객사의 최초 피드백을 빠르게 반영해야 했습니다.</li>
-                            <li>동기들로 이뤄진 팀이라 팀원 간 개발 역량 차이가 있었고, 일정 내 완성도를 맞추는 것이 과제였습니다.</li>
+                            <li>함께 처음 맡는 프로젝트라 페이지마다 완성도 기준을 맞추는 것이 과제였습니다.</li>
                           </ul></div>
                           <div class="step"><strong>해결 과정</strong><ul>
                             <li>PL로서 페이지별 업무를 팀원 4명에게 나누고, 입력값 검증을 공통으로 적용했습니다. 받은 피드백은 항목별로 정리해 수정했습니다.</li>
-                            <li>개발 진행에 어려움이 있는 팀원은 개발 방법을 직접 알려 주며 함께 진행했고, 동기 팀원들에게는 결과물 기준에 맞춰 수정할 부분을 구체적으로 피드백했습니다.</li>
+                            <li>막히는 구간은 구현 방법을 정리해 함께 진행했고, 결과물 기준에 맞춰 수정할 부분을 구체적으로 피드백했습니다.</li>
                           </ul></div>
                           <div class="step result"><strong>결과</strong><ul>
                             <li>일정 내에 모든 페이지를 구축하고, 고객사의 최초 피드백을 반영해 배포를 마쳤습니다.</li>

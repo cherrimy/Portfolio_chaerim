@@ -207,6 +207,9 @@
     }
   }
   @media screen and (max-width: 736px) {
+    #first .skill-groups {
+      margin-top: 18px;
+    }
     #first .features {
       gap: 22px 0;
     }
@@ -1095,6 +1098,7 @@ button:focus-visible {
 #second .projects li .project-meta dd { font-size: 14px; line-height: 1.7; }
 .case-study article { margin-bottom: 28px; padding-bottom: 24px; }
 #second .case-study h3 { color: #534a86; font-size: 15px; line-height: 1.5; }
+#second .case-study.lead-cases > article > h3 { font-size: 18px; }
 .case-study .case-desc { font-size: 13px; color: #777; }
 .case-study .case-role { font-size: 13px; }
 .case-study .step {

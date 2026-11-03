@@ -22,9 +22,19 @@
   const detailSections = document.querySelectorAll('.detail-section, .detail-section-light');
   const projectCards = document.querySelectorAll('.project-card[href^="#project-"]');
   const detailTabs = document.querySelectorAll('.detail-tab');
+  const detailNextLinks = document.querySelectorAll('.detail-next[href^="#project-"]');
+  const sectionNextLinks = document.querySelectorAll('.detail-next[href="#about"]');
 
   if (detailSections.length && projectCards.length) {
     document.documentElement.classList.add('tabs-enabled');
+
+    const scrollToDetailTop = function (target) {
+      const header = document.querySelector('.site-header');
+      const tabs = document.querySelector('.detail-tabs');
+      const offset = (header ? header.offsetHeight : 0) + (tabs ? tabs.offsetHeight : 0);
+      const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    };
 
     const showDetail = function (id, shouldScroll) {
       let target = null;
@@ -49,15 +59,11 @@
         }
       });
       if (shouldScroll === 'card') {
-        const divider = document.getElementById('project-details');
-        (divider || target).scrollIntoView({ behavior: 'smooth', block: 'start' });
+        scrollToDetailTop(target);
+      } else if (shouldScroll === 'next') {
+        scrollToDetailTop(target);
       } else if (shouldScroll === 'tab') {
-        // 탭 전환: 이미 상세 영역 안에 있으면 상세 상단으로만 이동
-        const top = target.getBoundingClientRect().top;
-        const stickyOffset = window.innerWidth <= 700 ? 118 : 130;
-        if (top < stickyOffset - 2 || top > window.innerHeight * 0.6) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+        scrollToDetailTop(target);
       }
       return true;
     };
@@ -67,6 +73,30 @@
         event.preventDefault();
         const id = card.getAttribute('href').slice(1);
         showDetail(id, 'card');
+        history.replaceState(null, '', '#' + id);
+      });
+    });
+
+    detailNextLinks.forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+        const id = link.getAttribute('href').slice(1);
+        showDetail(id, 'next');
+        history.replaceState(null, '', '#' + id);
+      });
+    });
+
+    sectionNextLinks.forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+        const id = link.getAttribute('href').slice(1);
+        const target = document.getElementById(id);
+        if (!target) return;
+        const header = document.querySelector('.site-header');
+        const headerHeight = header ? header.offsetHeight : 0;
+        const innerOffset = window.innerWidth <= 700 ? 28 : 44;
+        const top = target.getBoundingClientRect().top + window.pageYOffset - headerHeight + innerOffset;
+        window.scrollTo({ top: top, behavior: 'smooth' });
         history.replaceState(null, '', '#' + id);
       });
     });

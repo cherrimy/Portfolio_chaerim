@@ -588,10 +588,10 @@
      --dw = 기기 폭(칸 대비 %, 단위 없는 숫자). 이 값 하나로 폭·베젤·모서리가 같이 줄고 늘어남
      - 베젤은 기기 폭의 3.4%, 바깥 모서리 5.4%, 화면 모서리 0.8% */
   .shots {
-    --dw: 50;
+    --dw: 56;
   }
   .shots .shot-narrow {
-    --dw: 38;
+    --dw: 44;
   }
   .shots .shot-tablet,
   .shots .shot-narrow {
@@ -642,7 +642,7 @@
     align-items: flex-end;
     justify-content: center;
     gap: 3%;
-    width: 86%;
+    width: 92%;
     margin-inline: auto;
   }
   .shots-device figure {
@@ -661,9 +661,9 @@
     border-radius: 9cqw;
   }
   @media (max-width: 900px) {
-    .shots { --dw: 72; }
-    .shots .shot-narrow { --dw: 54; }
-    .shots-device { width: 92%; }
+    .shots { --dw: 78; }
+    .shots .shot-narrow { --dw: 60; }
+    .shots-device { width: 96%; }
   }
   @media (max-width: 640px) {
     .shots { --dw: 100; }
@@ -1004,7 +1004,7 @@
 }
 
 #second .featured-projects li img {
-  max-height: 420px;
+  max-height: 460px;
 }
 
 #second .projects li .device img,

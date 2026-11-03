@@ -19,6 +19,80 @@
     });
   }
 
+  const detailSections = document.querySelectorAll('.detail-section, .detail-section-light');
+  const projectCards = document.querySelectorAll('.project-card[href^="#project-"]');
+  const detailTabs = document.querySelectorAll('.detail-tab');
+
+  if (detailSections.length && projectCards.length) {
+    document.documentElement.classList.add('tabs-enabled');
+
+    const showDetail = function (id, shouldScroll) {
+      let target = null;
+      detailSections.forEach(function (section) {
+        const isActive = section.id === id;
+        section.classList.toggle('is-active', isActive);
+        if (isActive) target = section;
+      });
+      if (!target) return false;
+      projectCards.forEach(function (card) {
+        const isActive = card.getAttribute('href') === '#' + id;
+        card.classList.toggle('is-active', isActive);
+        card.setAttribute('aria-current', isActive ? 'true' : 'false');
+      });
+      detailTabs.forEach(function (tab) {
+        const isActive = tab.getAttribute('href') === '#' + id;
+        tab.classList.toggle('is-active', isActive);
+        tab.setAttribute('aria-selected', String(isActive));
+        if (isActive && tab.scrollIntoView) {
+          const bar = tab.parentElement;
+          bar.scrollTo({ left: tab.offsetLeft - 24, behavior: 'smooth' });
+        }
+      });
+      if (shouldScroll === 'card') {
+        const divider = document.getElementById('project-details');
+        (divider || target).scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else if (shouldScroll === 'tab') {
+        // 탭 전환: 이미 상세 영역 안에 있으면 상세 상단으로만 이동
+        const top = target.getBoundingClientRect().top;
+        const stickyOffset = window.innerWidth <= 700 ? 118 : 130;
+        if (top < stickyOffset - 2 || top > window.innerHeight * 0.6) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+      return true;
+    };
+
+    projectCards.forEach(function (card) {
+      card.addEventListener('click', function (event) {
+        event.preventDefault();
+        const id = card.getAttribute('href').slice(1);
+        showDetail(id, 'card');
+        history.replaceState(null, '', '#' + id);
+      });
+    });
+
+    detailTabs.forEach(function (tab) {
+      tab.addEventListener('click', function (event) {
+        event.preventDefault();
+        const id = tab.getAttribute('href').slice(1);
+        showDetail(id, 'tab');
+        history.replaceState(null, '', '#' + id);
+      });
+    });
+
+    const hashId = window.location.hash.slice(1);
+    const initialId = document.getElementById(hashId) && document.getElementById(hashId).matches('.detail-section, .detail-section-light')
+      ? hashId
+      : detailSections[0].id;
+    showDetail(initialId, false);
+    if (initialId === hashId) {
+      window.addEventListener('load', function () {
+        const el = document.getElementById('project-details');
+        if (el) el.scrollIntoView();
+      });
+    }
+  }
+
   const sections = document.querySelectorAll('main section[id], footer[id]');
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(function (entries) {

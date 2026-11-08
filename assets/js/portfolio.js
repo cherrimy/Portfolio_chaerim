@@ -44,11 +44,6 @@
         if (isActive) target = section;
       });
       if (!target) return false;
-      projectCards.forEach(function (card) {
-        const isActive = card.getAttribute('href') === '#' + id;
-        card.classList.toggle('is-active', isActive);
-        card.setAttribute('aria-current', isActive ? 'true' : 'false');
-      });
       detailTabs.forEach(function (tab) {
         const isActive = tab.getAttribute('href') === '#' + id;
         tab.classList.toggle('is-active', isActive);
@@ -110,16 +105,33 @@
       });
     });
 
-    const hashId = window.location.hash.slice(1);
-    const initialId = document.getElementById(hashId) && document.getElementById(hashId).matches('.detail-section, .detail-section-light')
-      ? hashId
-      : detailSections[0].id;
-    showDetail(initialId, false);
-    if (initialId === hashId) {
-      window.addEventListener('load', function () {
-        const el = document.getElementById('project-details');
-        if (el) el.scrollIntoView();
+    // 스크롤 위치에 따라 활성 탭 자동 전환
+    const sectionList = Array.prototype.slice.call(detailSections);
+    let ticking = false;
+    const syncActiveDetail = function () {
+      ticking = false;
+      const header = document.querySelector('.site-header');
+      const tabs = document.querySelector('.detail-tabs');
+      const line = (header ? header.offsetHeight : 0) + (tabs ? tabs.offsetHeight : 0) + 40;
+      let current = sectionList[0];
+      sectionList.forEach(function (section) {
+        if (section.getBoundingClientRect().top <= line) current = section;
       });
+      if (!current.classList.contains('is-active')) showDetail(current.id, false);
+    };
+    window.addEventListener('scroll', function () {
+      if (!ticking) {
+        ticking = true;
+        window.requestAnimationFrame(syncActiveDetail);
+      }
+    }, { passive: true });
+
+    const hashId = window.location.hash.slice(1);
+    const hashEl = document.getElementById(hashId);
+    const hasDetailHash = hashEl && hashEl.matches('.detail-section, .detail-section-light');
+    showDetail(hasDetailHash ? hashId : detailSections[0].id, false);
+    if (hasDetailHash) {
+      window.addEventListener('load', function () { scrollToDetailTop(hashEl); });
     }
   }
 

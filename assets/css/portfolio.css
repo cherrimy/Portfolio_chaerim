@@ -87,13 +87,9 @@ button { font: inherit; }
 .project-card-wide .project-card-info { display: block; }
 .project-card-wide .project-card-info > p { max-width: 360px; text-align: left; }
 .project-card-wide .tag-row { margin-top: 18px; }
-.tabs-enabled .detail-section, .tabs-enabled .detail-section-light { display: none; }
 html:not(.tabs-enabled) .detail-tabs { display: none; }
 .tabs-enabled .detail-section, .tabs-enabled .detail-section-light { padding-top: 64px; }
 .tabs-enabled .detail-section.is-active, .tabs-enabled .detail-section-light.is-active { display: block; }
-.project-card.is-active .project-image { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent); }
-.project-card.is-active h3 { color: var(--accent); }
-.project-card.is-active .project-index { color: white; background: var(--accent); }
 .detail-tabs { position: sticky; top: 76px; z-index: 50; background: rgba(255,255,255,.94); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); backdrop-filter: blur(16px); }
 .detail-tabs-inner { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; }
 .detail-tabs-inner::-webkit-scrollbar { display: none; }

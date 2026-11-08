@@ -91,7 +91,7 @@ html:not(.tabs-enabled) .detail-tabs { display: none; }
 .tabs-enabled .detail-section, .tabs-enabled .detail-section-light { padding-top: 64px; }
 .tabs-enabled .detail-section.is-active, .tabs-enabled .detail-section-light.is-active { display: block; }
 .detail-tabs { position: sticky; top: 76px; z-index: 50; background: rgba(255,255,255,.94); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); backdrop-filter: blur(16px); }
-.detail-tabs-inner { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; }
+.detail-tabs-inner { display: flex; gap: 6px; overflow-x: auto; overflow-y: hidden; overscroll-behavior: contain; touch-action: pan-x; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
 .detail-tabs-inner::-webkit-scrollbar { display: none; }
 .detail-tab { position: relative; flex: 0 0 auto; display: flex; align-items: center; gap: 9px; padding: 17px 18px; color: #7a8292; font-size: 12px; font-weight: 700; letter-spacing: -.02em; white-space: nowrap; transition: color .2s ease; }
 .detail-tab span { color: #a3aab8; font-size: 9px; font-weight: 800; letter-spacing: .12em; transition: color .2s ease; }
